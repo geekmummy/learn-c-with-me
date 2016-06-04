@@ -1,11 +1,18 @@
 #include<stdio.h>
-int main(void)
-{
-	printf("hello! \a\a\a\n");
 
-	printf("hello! \a\a\a\n");
-
-	printf("hello! \a\a\a\n");
-
-	return(0);
+int sum(int x, int y) {
+	int t = x + y;
+	return t;
 }
+
+int main(void) {
+
+	int a = 1;
+	int b = 2;
+	int t = sum(a, b);
+
+	printf("t=%d", t);
+
+	return (0);
+}
+
