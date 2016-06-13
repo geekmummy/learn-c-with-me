@@ -1,3 +1,6 @@
+程序目的：输入姓名、年龄和体重，并显示
+
+
 #include<stdio.h>
 
 int main(void){
