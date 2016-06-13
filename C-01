@@ -1,6 +1,5 @@
 程序目的：输入姓名、年龄和体重，并显示
 
-
 #include<stdio.h>
 
 int main(void){
@@ -26,4 +25,24 @@ int main(void){
   printf("Age:%d",age);
 
   return(0);
+}
+
+
+计算轮胎的净销售价格
+
+int main(void){
+   int numTires;
+   float tirePrice, beforeTax, netSale;
+   float taxRate = .07; // Sales tax
+
+   printf("How many tires bought?\n ");
+   scanf(" %d", &numTires);
+   printf("How much is each tire? \n");
+   scanf(" %d", &tirePrice);
+
+   beforeTax = tirePrice * numTires;
+   netSale = beforeTax + (beforeTax * taxRate);
+   printf("Your total sale is %.2f\n", netSale);
+
+   return(0);
 }
