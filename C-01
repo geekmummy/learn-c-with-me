@@ -47,3 +47,19 @@ int main(void){
    return(0);
 }
 
+
+练习 && 运算符：
+int main(){
+  char name[25];
+  printf("What is your last name?\n");
+  scanf(" %s", name);
+
+  if ((name[0]>='P') && (name[0]<='S')){
+    printf("You must go to room 2432\n");
+    printf("for your tickets.\n");
+  }
+  else {
+    printf("You can get your tickets here.\n");
+  }
+  return(0);
+}
