@@ -1,0 +1,51 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+#define BINARY_32_BIT 32
+
+int readInteger();
+void transfer(int integer, char *array, int *size);
+void reverse(char *array, int size);
+
+int main(void) {
+
+  char array[BINARY_32_BIT + 1];
+  int size = 0;
+
+  int integer = readInteger();
+
+  transfer(integer, array, &size);
+
+  reverse(array, size);
+
+  return EXIT_SUCCESS;
+}
+
+int readInteger() {
+  puts("please input an integer");
+  int integer;
+  scanf("%d", &integer);
+  printf("The number you input is: %d \n", integer);
+  return integer;
+}
+
+void transfer(int integer, char *array, int *size) {
+  int shang = integer;
+  while (shang != 0) {
+    *(array++) = shang % 2;
+    (*size)++;
+
+    printf("%d ", shang % 2);
+    shang = shang / 2;
+  }
+}
+
+void reverse(char *array, int size) {
+  printf("\n");
+  char *p;
+  p = array + size - 1;
+  for (; p >= array; p--) {
+    printf("%d", *p);
+  }
+  printf("\n");
+}
