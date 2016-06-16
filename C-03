@@ -1,0 +1,25 @@
+从1循环到100，并报告第一个能同时被3和4整除的数
+
+int main(void) {
+  int i;
+  for(i=1;i<100;i++){
+    printf("Testing %d\n",i);
+    if((i%3==0 && (i%4)==0)){
+      printf("Found it!\n");
+      break;
+    }
+    if(i%3==0){
+      printf("I am divisible by 3.\n");
+      printf("But that's only half the test!\n");
+      continue;
+    }
+    if(i%4==0){
+      printf("I am divisible by 4.\n");
+      printf("One out of two isn't bad!\n");
+      continue;
+    }
+    printf("I am not divisible by 3 or 4!\n");
+  }
+  
+	return 0;
+}
