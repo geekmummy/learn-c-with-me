@@ -23,3 +23,25 @@ int main(void) {
   
 	return 0;
 }
+
+
+从键盘读取一个字符并且把字符存储在一个字符数组中。随后用一连串的putchar()从后面开始打印数组
+
+int main(void) {
+  int i;
+  char msg[25];
+  printf("Type up to 25 characters then press Enter...\n");
+  for(i=0;i<25;i++){
+    msg[i]=getchar();
+    if (msg[i]=='\n'){
+      i--;
+      break;
+    }
+  }
+  putchar('\n');
+  for(;i>=0;i--){
+    putchar(msg[i]);
+  }
+  putchar('\n');
+  return 0;
+}
