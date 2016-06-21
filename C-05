@@ -36,4 +36,21 @@ int main(void) {
   return 0;
 }
 
+指针变量
+
+int main(void) {
+  char initial='G';
+  char *pInitial;
+  float score=97.4;
+  float *pScore;
+
+  pInitial=&initial;
+  pScore=&score;
+  printf("The initial is %c.\n",*pInitial);
+ 
+  *pScore=85.0;
+  printf("The score is %.1f.\n",*pScore);
+
+  return 0;
+}
 
